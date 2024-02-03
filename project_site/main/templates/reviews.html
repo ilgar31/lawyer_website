@@ -1,0 +1,20 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block title %}
+Содействие и защита
+{% endblock %}
+
+{% block head_links %}
+<a href="{% url 'contacts' %}" class="link">Контакты</a>
+<a href="{% url 'reviews' %}" class="link active_link">Отзывы</a>
+<a href="{% url 'home' %}"  class="link">Главная страница</a>
+{% endblock %}
+
+{% block content %}
+<p>Отзывы</p>
+{% endblock %}
