@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Reviews
 
 
 def index(request):
@@ -6,7 +7,10 @@ def index(request):
 
 
 def reviews(request):
-    return render(request, 'reviews.html')
+    mas = []
+    for review in Reviews.objects.all():
+        mas.append({'name': review.name, 'review': review.review, 'date': str(review.date.strftime("%d.%m.%Y %H:%M"))})
+    return render(request, 'reviews.html', {'reviews': mas})
 
 
 def contacts(request):

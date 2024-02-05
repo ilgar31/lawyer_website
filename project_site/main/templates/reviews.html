@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block link %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/reviews.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -16,5 +16,41 @@
 {% endblock %}
 
 {% block content %}
-<p>Отзывы</p>
+<div class="title_block">
+    <div class="content_block">
+        <h1>Отзывы</h1>
+    </div>
+</div>
+
+<div class="reviews">
+    <div class="reviews_content">
+        {% for review in reviews %}
+            <div class="review_block">
+                <div class="review_head">
+                    <img src="{% static 'png/profile.png' %}" class="review_head_img">
+                    <div class="review_head_info">
+                        <p class="review_name">{{ review.name }}</p>
+                        <p class="review_date">{{ review.date }}</p>
+                    </div>
+                </div>
+                <div class="review_body">
+                    {{ review.review }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="make_review">
+    <div class="make_review_content">
+        <h1>Уже пользовались нашими услугами? Оставьте свой отзыв!</h1>
+        <p>Ваше мнение очень важно для нас, и мы будем благодарны, если вы поделитесь своим опытом.</p>
+        <form method="POST">
+            {% csrf_token %}
+            <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" required>
+            <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" required><br>
+            <button type="" class="continue_button">Отправить</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
