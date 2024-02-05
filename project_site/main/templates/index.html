@@ -118,8 +118,132 @@
     </div>
 </div>
 
-<div class="">
-
+<div class="contact_us1">
+    <div class="contact_us1_content">
+        <div class="contact_us1_first_block">
+            <div class="contact_us1_text">
+                <h1>Нет нужной услуги?</h1>
+                <p>Оставьте заявку, и специалист свяжется с вами в ближайшее время. Мы всегда готовы ответить на любые вопросы и оказать необходимую помощь.</p>
+            </div>
+            <div class="contact_us1_number">
+                <div class="line"></div>
+                <div class="contact_us1_number_text">
+                    <p>Связаться с юристом</p>
+                    <a href="tel:89622080151">8 (962) 208-01-51</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact_us1_second_block">
+            <form method="post" class="form_block">
+                {% csrf_token %}
+                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" required>
+                <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" required><br>
+                <button type="" class="continue_button">Отправить</button>
+            </form>
+        </div>
+    </div>
 </div>
+
+<div class="why_we">
+    <div class="why_we_content">
+        <h1>Почему стоит обратиться к нам</h1>
+        <div class="why_we_grid">
+            <div class="why_we_block">
+                <h2>Вы ищете надежного семейного юриста</h2>
+                <div class="why_we_block_text">
+                    Одним из основных направлений нашей деятельности является оказание помощи семьям. Наш опытный юрист по семейным вопросам предоставит вам поддержку в защите прав ваших близких и решении любых правовых вопросов.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Вам требуется срочная помощь юриста</h2>
+                <div class="why_we_block_text">
+                    Часто люди обращаются за помощью в крайних ситуациях или в последний момент. Наша команда готова к выполнению любых задач и присоединяется к работе на любом этапе.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Вы хотите оценку перспектив</h2>
+                <div class="why_we_block_text">
+                    Принцип полной открытости является одним из основных принципов компании "Содействие и защита". После тщательного изучения ситуации мы предоставим вам информацию о возможных рисках и трудностях, а также дадим честную оценку вероятности успешного разрешения спора.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Вам сложно довериться юристу</h2>
+                <div class="why_we_block_text">
+                    Наши основные усилия направлены на защиту ваших прав. Мы никогда не утаиваем детали и перспективы дела, не ставим под угрозу безопасность клиента и всегда прозрачно озвучиваем стоимость предоставляемых услуг. Семейный юрист всегда выступает на вашей стороне!
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Вам важен результат</h2>
+                <div class="why_we_block_text">
+                    Известное имя не является гарантией успеха. Наша команда – это опытные специалисты, готовые прийти на помощь и бороться за ваши права в любой ситуации. Успешные дела свидетельствуют о профессионализме наших сотрудников.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Вы цените приватность</h2>
+                <div class="why_we_block_text">
+                    Мы строго соблюдаем конфиденциальность информации, полученной от клиента. Сотрудничая с нами, вы можете быть уверены, что любые деликатные моменты останутся нераскрытыми.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="how_we_work">
+    <div class="how_we_work_content">
+        <h1>Как мы работаем?</h1>
+        <div class="how_we_work_info">
+            Благодаря эффективной организации процессов, наш коллектив способен оперативно и качественно разрешить представленные вами вопросы.
+        </div>
+        <div class="how_we_work_block">
+            <img src="{% static 'png/steps.png' %}" class="steps">
+            <img src="{% static 'png/steps2.png' %}" class="steps2">
+            <div class="how_we_work_body">
+                <div class="how_we_work_item">
+                    <h2>Вы обращаетесь к нам</h2>
+                    <p>Обратиться к нам за помощью вы можете по телефону, на сайте или по e-mail,</p>
+                </div>
+                <div class="how_we_work_item">
+                    <h2>Предлагаем варианты решения проблемы</h2>
+                    <p>Мы не даем пустых обещаний и невыполнимых гарантий, а анализируем перспективы, честно озвучиваем их клиенту и предлагаем подходящий вариант выхода из ситуации.</p>
+                </div>
+                <div class="how_we_work_item">
+                    <h2>Работаем над вашей проблемой</h2>
+                    <p>Опытные специалисты в правовой области решат вопрос. При необходимости вовлечем наш аналитический центр для дополнительного анализа и эффективного разрешения задач.</p>
+                </div>
+                <div class="how_we_work_item">
+                    <h2>Ваша проблема решена</h2>
+                    <p>Мы знаем, что клиенту не интересен процесс, а важен результат. Решение вопроса в вашу пользу – цель работы нашей команды профессионалов.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact_us1" style="margin-top: 20px;">
+    <div class="contact_us1_content">
+        <div class="contact_us1_first_block" style="height: 300px;">
+            <div class="contact_us1_text">
+                <h1>Готовы обратиться к юристу прямо сейчас?</h1>
+                <p>Оставьте заявку, и мы оперативно свяжемся с вами, после чего подберем специалиста в нужной области права.</p>
+            </div>
+            <div class="contact_us1_number">
+                <div class="line"></div>
+                <div class="contact_us1_number_text">
+                    <p>Связаться с юристом</p>
+                    <a href="tel:89622080151">8 (962) 208-01-51</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact_us1_second_block">
+            <form method="post" class="form_block">
+                {% csrf_token %}
+                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" required>
+                <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" required><br>
+                <button type="" class="continue_button">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
