@@ -5,6 +5,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/reviews.css' %}">
 {% endblock %}
 
+{% block script %}
+<script src="{% static 'js/reviews.js' %}" defer></script>
+{% endblock %}
+
 {% block title %}
 Содействие и защита
 {% endblock %}
@@ -45,11 +49,11 @@
     <div class="make_review_content">
         <h1>Уже пользовались нашими услугами? Оставьте свой отзыв!</h1>
         <p>Ваше мнение очень важно для нас, и мы будем благодарны, если вы поделитесь своим опытом.</p>
-        <form method="POST">
+        <form method="POST" class="make_review_form">
             {% csrf_token %}
-            <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" required>
-            <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" required><br>
-            <button type="" class="continue_button">Отправить</button>
+            <input id='name' name="name" type="text" placeholder="ФИО" maxlength="45" size="30" class="input_form" autocomplete="off" required>
+            <textarea id='review' name="review" placeholder="Ваш отзыв" maxlength="1500" size="30" class="input_form input_review" autocomplete="off" required></textarea>
+            <button type='button' class="continue_button" onclick="make_review()">Отправить</button>
         </form>
     </div>
 </div>

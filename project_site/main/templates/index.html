@@ -136,9 +136,9 @@
         <div class="contact_us1_second_block">
             <form method="post" class="form_block">
                 {% csrf_token %}
-                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" required>
-                <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" required><br>
-                <button type="" class="continue_button">Отправить</button>
+                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
+                <input name="number" type="tel" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
+                <button type="button" class="continue_button">Отправить</button>
             </form>
         </div>
     </div>
@@ -237,9 +237,9 @@
         <div class="contact_us1_second_block">
             <form method="post" class="form_block">
                 {% csrf_token %}
-                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" required>
-                <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" required><br>
-                <button type="" class="continue_button">Отправить</button>
+                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
+                <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
+                <button type="button" class="continue_button">Отправить</button>
             </form>
         </div>
     </div>
