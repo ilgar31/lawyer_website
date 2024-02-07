@@ -5,6 +5,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 {% endblock %}
 
+{% block script %}
+<script src="{% static 'js/index.js' %}" defer></script>
+{% endblock %}
+
 {% block title %}
 Содействие и защита
 {% endblock %}
@@ -22,12 +26,12 @@
         <div class="title_block_text">
             <h1>Юридическая помощь в любой жизненной ситуации</h1>
             <p>Столкнулись с проблемами? Мы найдем лучшее решение!</p>
-            <button>Связаться с нами</button>
+            <button onclick="location.href='{% url 'contacts' %}';">Связаться с нами</button>
         </div>
         <div class="title_contact">
             <p>Связаться с юристом</p>
             <a href="tel:89622888151">8 (962) 208-01-51</a>
-            <button>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
+            <button onclick="location.href='#call';">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
         </div>
     </div>
 </div>
@@ -136,10 +140,11 @@
         <div class="contact_us1_second_block">
             <form method="post" class="form_block">
                 {% csrf_token %}
-                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
-                <input name="number" type="tel" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
-                <button type="button" class="continue_button">Отправить</button>
+                <input id='name1' name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
+                <input id='number1' name="number" type="tel" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
+                <button type="button" class="continue_button" onclick="first_contact_block()">Отправить</button>
             </form>
+            <p>Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="{% url 'personal_data' %}">политикой обработки ПД</a> </p>
         </div>
     </div>
 </div>
@@ -219,7 +224,7 @@
     </div>
 </div>
 
-<div class="contact_us1" style="margin-top: 20px;">
+<div class="contact_us1" style="margin-top: 20px;" id="call">
     <div class="contact_us1_content">
         <div class="contact_us1_first_block" style="height: 300px;">
             <div class="contact_us1_text">
@@ -237,10 +242,11 @@
         <div class="contact_us1_second_block">
             <form method="post" class="form_block">
                 {% csrf_token %}
-                <input name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
-                <input name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
-                <button type="button" class="continue_button">Отправить</button>
+                <input id='name2' name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
+                <input id='number2' name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
+                <button type="button" class="continue_button" onclick="second_contact_block()">Отправить</button>
             </form>
+            <p>Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="{% url 'personal_data' %}">политикой обработки ПД</a> </p>
         </div>
     </div>
 </div>

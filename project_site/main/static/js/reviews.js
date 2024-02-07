@@ -16,7 +16,7 @@ function make_review() {
         },
         success: (res)=> {
             if (res.status == 'success') {
-                alert('Ваш отзыв опубликован!');
+                alert('Ваш отзыв отправлен на модерацию!');
                 document.getElementById("name").value = '';
                 document.getElementById("review").value = '';
             }

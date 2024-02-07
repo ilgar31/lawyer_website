@@ -48,13 +48,14 @@
 <div class="make_review">
     <div class="make_review_content">
         <h1>Уже пользовались нашими услугами? Оставьте свой отзыв!</h1>
-        <p>Ваше мнение очень важно для нас, и мы будем благодарны, если вы поделитесь своим опытом.</p>
+        <p class="make_review_content_p">Ваше мнение очень важно для нас, и мы будем благодарны, если вы поделитесь своим опытом.</p>
         <form method="POST" class="make_review_form">
             {% csrf_token %}
             <input id='name' name="name" type="text" placeholder="ФИО" maxlength="45" size="30" class="input_form" autocomplete="off" required>
             <textarea id='review' name="review" placeholder="Ваш отзыв" maxlength="1500" size="30" class="input_form input_review" autocomplete="off" required></textarea>
             <button type='button' class="continue_button" onclick="make_review()">Отправить</button>
         </form>
+        <p class="soglasie">Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="{% url 'personal_data' %}" class="soglasie_a">политикой обработки ПД</a> </p>
     </div>
 </div>
 {% endblock %}
